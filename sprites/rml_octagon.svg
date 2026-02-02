@@ -1,0 +1,15 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <polygon
+    fill="white"
+    points="
+      512,0
+      874,150
+      1024,512
+      874,874
+      512,1024
+      150,874
+      0,512
+      150,150
+    "
+  />
+</svg>
