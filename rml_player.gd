@@ -1,4 +1,5 @@
 extends RmlEntity
+class_name RmlPlayer
 ## Default godot player controller
 ## Gravity-based movement
 
@@ -7,6 +8,9 @@ const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
+	_move(delta)
+
+func _move(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
