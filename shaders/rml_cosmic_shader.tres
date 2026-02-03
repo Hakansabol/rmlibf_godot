@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cqcrmp2b272kf"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cqcrmp2b272kf"]
 
 [ext_resource type="Shader" uid="uid://4m8ocwm88geg" path="res://rmlibf_godot/shaders/rml_cosmic_shader.gdshader" id="1_5br1i"]
 

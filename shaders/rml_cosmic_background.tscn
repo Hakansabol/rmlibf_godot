@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy67uepvbmbl1"]
+[gd_scene format=3 uid="uid://cy67uepvbmbl1"]
 
 [ext_resource type="Material" uid="uid://cqcrmp2b272kf" path="res://rmlibf_godot/shaders/rml_cosmic_shader.tres" id="1_jkalo"]
-[ext_resource type="Texture2D" uid="uid://c8d7s0k1mcxj" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="2_8vocv"]
+[ext_resource type="Texture2D" uid="uid://cab1cv3xq7rfj" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="2_8vocv"]
 
-[node name="rml_cosmic_background" type="Sprite2D"]
+[node name="rml_cosmic_background" type="Sprite2D" unique_id=1671714875]
 modulate = Color(1, 1, 1, 0.12156863)
 self_modulate = Color(1, 1, 1, 0.92156863)
 show_behind_parent = true

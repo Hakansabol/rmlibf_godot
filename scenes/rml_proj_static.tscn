@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ca1otq4jcwlwe"]
+
+[ext_resource type="Script" uid="uid://bfv2melhsdj3h" path="res://rmlibf_godot/rml_proj_linear.gd" id="1_qqtsp"]
+[ext_resource type="Texture2D" uid="uid://bfgd40m04h5xu" path="res://rmlibf_godot/sprites/rml_hexagon.svg" id="2_6v1bn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huihk"]
+
+[node name="rml_proj_static" type="Area2D" unique_id=1122430209]
+script = ExtResource("1_qqtsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1723135899]
+shape = SubResource("RectangleShape2D_huihk")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=656667477]
+scale = Vector2(0.019765625, 0.019765625)
+texture = ExtResource("2_6v1bn")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
