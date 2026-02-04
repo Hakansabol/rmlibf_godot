@@ -2,6 +2,8 @@
 extends CollisionObject2D
 class_name RmlEntity
 
+func get_scene_root() -> Node:
+	return get_tree().root.get_child(1)
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
 
@@ -21,11 +23,8 @@ func _ready() -> void:
 func _damage(health: int):
 	current_health -= health
 
-	print("ouch")
-
 	if current_health <= 0:
 		_on_death()
 
 func _on_death():
-	print("unimplemented death effect")
 	queue_free()

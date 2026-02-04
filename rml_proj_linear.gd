@@ -6,7 +6,6 @@ var velocity: Vector2
 var lifetime: float
 var delay: float
 func initialize(src: RmlEntity, vel: Vector2, life: float, del: float = 0):
-	src.add_child(self)
 	velocity = vel
 	lifetime = life
 	delay = del
