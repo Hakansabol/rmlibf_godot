@@ -1,0 +1,31 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b0qg2rl8x3v01"]
+
+[ext_resource type="Shader" uid="uid://bppk23y3gec5t" path="res://rmlibf_godot/shaders/noise_damage.gdshader" id="1_xx7gp"]
+[ext_resource type="Texture2D" uid="uid://dnj717ux3ssxw" path="res://sprites/wall.png" id="2_ww2ty"]
+
+[sub_resource type="Gradient" id="Gradient_iev18"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_enkk8"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p1lal"]
+width = 300
+height = 300
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_enkk8")
+color_ramp = SubResource("Gradient_iev18")
+
+[resource]
+shader = ExtResource("1_xx7gp")
+shader_parameter/sensitivity = 0.5
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_p1lal")
+shader_parameter/noise_config_size = Vector2(220, 200)
+shader_parameter/noise_seed = 740.9190351936525
+shader_parameter/replace_color = Color(0.18039216, 0.09019608, 0, 1)
+shader_parameter/edge_color = Color(0.4, 1, 0.4, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/details_color = Color(1, 0, 1, 1)
+shader_parameter/details_opacity = 0.2050000097375
+shader_parameter/edge_distance_map = ExtResource("2_ww2ty")
+shader_parameter/edge_bias_strength = 0.0
+shader_parameter/edge_remap_min = 0.0
+shader_parameter/edge_remap_max = 0.430000020425
