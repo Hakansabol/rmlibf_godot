@@ -11,11 +11,11 @@ class smoothing_effect:
 	var time: float
 	var time_elapsed: float
 
-	func _init(n: String, t: String, str: float, time: float) -> void:
+	func _init(n: String, t: String, strength_of_effect: float, time_len: float) -> void:
 		self.effect_name = n
 		self.smoothing_type = t
-		self.strength = str
-		self.time = time
+		self.strength = strength_of_effect
+		self.time = time_len
 		self.time_elapsed = 0
 
 
@@ -23,6 +23,8 @@ func shake(strength: float):
 	effects.push_back(smoothing_effect.new("shake", "pulse", strength, 5))
 
 func _ready() -> void:
+	if not game_manager:
+		print("No game manager found! Add one as an autoload to register singletons!")
 	game_manager.camera = self
 
 var last_displacement: Vector2 = Vector2(0, 0)
@@ -30,25 +32,31 @@ func _process(delta: float) -> void:
 	var shake: float = 0
 
 	# push all the numbers into the effects
-	print(effects.size())
 	for i in range(effects.size()-1, -1, -1):
+		# Grab the data from the iterator
 		var eff: smoothing_effect = effects[i] as smoothing_effect
 		var value: float = 0
 
+		# !!! Apply smoothing (numerical decay) types. If you don't do this, the effect will last forever.
 		if eff.smoothing_type == "pulse":
 			value = eff.strength * pow(0.9, (eff.time_elapsed / eff.time) * 500)
+		else:
+			print("bad smoothing name")
 
+		# !!! Apply the effects here. If you don't do this, the effects won't visually appear at all.
 		if eff.effect_name == "shake":
 			shake += value
 		else:
 			print("bad effect name")
 
+		# Clear the effect out of the list once it decays. If you don't do this, the list will continue to grow and consume memory and loop cycles every frame.
 		if eff.time_elapsed > eff.time:
 			effects.pop_at(i)
 
 		eff.time_elapsed += delta
 	
-	# apply all the effects
+	# !!! apply all the effects
+	# Screen shake
 	var new_displacement: Vector2 = Vector2(randf_range(-shake,shake), randf_range(-shake,shake))
 	global_position = global_position - last_displacement + new_displacement
 	last_displacement = new_displacement
