@@ -2,6 +2,7 @@ shader_type canvas_item;
 
 // frisk256 @ Shadertoy
 // https://www.shadertoy.com/view/t3dfRr
+// CC-SA-NC remember to be noncommercial, future me!
 
 #define r (1.0 / SCREEN_PIXEL_SIZE).xy
 
