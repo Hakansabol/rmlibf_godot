@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://b0qg2rl8x3v01"]
 
-[ext_resource type="Shader" uid="uid://bppk23y3gec5t" path="res://rmlibf_godot/shaders/noise_damage.gdshader" id="1_xx7gp"]
-[ext_resource type="Texture2D" uid="uid://dnj717ux3ssxw" path="res://sprites/wall.png" id="2_ww2ty"]
+[ext_resource type="Shader" uid="uid://bppk23y3gec5t" path="res://rmlibf_godot/shaders/shadertoy/noise_damage.gdshader" id="1_xx7gp"]
+[ext_resource type="Texture2D" path="res://sprites/wall.png" id="2_ww2ty"]
 
 [sub_resource type="Gradient" id="Gradient_iev18"]
 

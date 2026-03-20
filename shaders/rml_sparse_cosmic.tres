@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dpsyxgnv58uu1"]
+
+[ext_resource type="Shader" uid="uid://bgbdcayjqf0ga" path="res://rmlibf_godot/shaders/rml_sparse_cosmic.gdshader" id="1_42obr"]
+[ext_resource type="Texture2D" uid="uid://dabjufbc25fim" path="res://boss_0_war/war_sword_0.png" id="2_2k4oj"]
+
+[resource]
+shader = ExtResource("1_42obr")
+shader_parameter/mask_tex = ExtResource("2_2k4oj")

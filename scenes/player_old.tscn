@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://da0y7ll2f4pba"]
+
+[ext_resource type="Script" uid="uid://bex3nxo86evjg" path="res://player.gd" id="1_srd1w"]
+[ext_resource type="Texture2D" uid="uid://b37w811qo4lq2" path="res://rmlibf_godot/sprites/rml_circle.svg" id="2_ct1o2"]
+[ext_resource type="Texture2D" uid="uid://1wgq38hesn0c" path="res://icon.svg" id="3_31qtx"]
+[ext_resource type="Texture2D" uid="uid://c5d06asevfna" path="res://sprites/frog.png" id="4_0gi6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyidc"]
+
+[node name="Player_old" type="CharacterBody2D" unique_id=1790137520 node_paths=PackedStringArray("grapple_range", "grapple_point", "grapple_line")]
+script = ExtResource("1_srd1w")
+grapple_range = NodePath("grapple range")
+grapple_point = NodePath("grapple point")
+grapple_line = NodePath("tongue")
+MAX_HEALTH = 4
+
+[node name="grapple range" type="Sprite2D" parent="." unique_id=1376988293]
+modulate = Color(1, 1, 1, 0.12156863)
+texture = ExtResource("2_ct1o2")
+
+[node name="grapple point" type="Sprite2D" parent="." unique_id=698207888]
+position = Vector2(6, 25)
+scale = Vector2(0.055, 0.055)
+texture = ExtResource("3_31qtx")
+
+[node name="tongue" type="Line2D" parent="." unique_id=79741891]
+self_modulate = Color(0, 1, 0, 1)
+width = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1362237418]
+position = Vector2(0.925, -0.96)
+scale = Vector2(0.091, 0.091)
+texture = ExtResource("4_0gi6p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1416499707]
+shape = SubResource("RectangleShape2D_pyidc")
