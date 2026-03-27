@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ca1otq4jcwlwe"]
 
-[ext_resource type="Script" uid="uid://bfv2melhsdj3h" path="res://rmlibf_godot/scripts/rml_proj_linear.gd" id="1_qqtsp"]
-[ext_resource type="Texture2D" uid="uid://bijk31ifsdq84" path="res://rmlibf_godot/sprites/rml_hexagon.svg" id="2_6v1bn"]
+[ext_resource type="Script" uid="uid://c1410bl55fqkd" path="res://scripts/proj_linear.gd" id="1_qqtsp"]
+[ext_resource type="Texture2D" uid="uid://bostxd5jl320a" path="res://rmlibf_godot/sprites/rml_hexagon.svg" id="2_6v1bn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huihk"]
 

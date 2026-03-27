@@ -23,9 +23,9 @@ func shake(strength: float):
 	effects.push_back(smoothing_effect.new("shake", "pulse", strength, 5))
 
 func _ready() -> void:
-	if not game_manager:
+	if not GameManager:
 		print("No game manager found! Add one as an autoload to register singletons!")
-	game_manager.camera = self
+	GameManager.camera = self
 
 var last_displacement: Vector2 = Vector2(0, 0)
 func _process(delta: float) -> void:

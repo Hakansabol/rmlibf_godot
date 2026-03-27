@@ -28,4 +28,4 @@ cp ./.scripts/player ../scripts/player.gd --no-clobber
 cp ./.scripts/projectile ../scripts/projectile.gd --no-clobber
 cp ./.scripts/proj_linear ../scripts/proj_linear.gd --no-clobber
 
-echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name game_manager to fix errors!"
+echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name GameManager (likely default) to fix errors!"
