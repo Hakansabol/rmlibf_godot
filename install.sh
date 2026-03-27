@@ -15,20 +15,17 @@ if [ ! -d "../addons/richtext2" ]; then
 	rm addons/ -r
 fi
 
-# these folders are created conditionally rather than supressing the error stream, I don't remember why.
-if [ ! -d "../sprites" ]; then
-	mkdir ../sprites
-fi
-if [ ! -d "../scenes" ]; then
-	mkdir ../scenes
-fi
-if [ ! -d "../sounds" ]; then
-	mkdir ../sounds
-fi
-if [ ! -d "../scripts" ]; then
-	mkdir ../scripts
-fi
-
 # Spawn other files.
-# This is a template, meaning it is meant to be edited for this individual project, unlike most other scripts, which are meant to be extended and left unchanged.
-cp ./extras/game_manager ../scripts/game_manager.gd --no-clobber
+mkdir ../sprites 2> /dev/null
+mkdir ../scenes 2> /dev/null
+mkdir ../sounds 2> /dev/null
+mkdir ../scripts 2> /dev/null
+cp ./.scripts/game_manager ../scripts/game_manager.gd --no-clobber
+cp ./.scripts/camera2D ../scripts/camera2D.gd --no-clobber
+cp ./.scripts/dialogue ../scripts/dialogue.gd --no-clobber
+cp ./.scripts/entity ../scripts/entity.gd --no-clobber
+cp ./.scripts/player ../scripts/player.gd --no-clobber
+cp ./.scripts/projectile ../scripts/projectile.gd --no-clobber
+cp ./.scripts/proj_linear ../scripts/proj_linear.gd --no-clobber
+
+echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name game_manager to fix errors!"

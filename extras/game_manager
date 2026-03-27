@@ -1,8 +1,0 @@
-extends Node
-
-var player: Player
-var scene: Scene
-var camera: RmlCamera
-var generic_dialogue_box: RmlDialogue
-var animations: AnimationPlayer
-var card_manager: CardManager

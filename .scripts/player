@@ -1,5 +1,5 @@
 extends RmlEntity
-class_name RmlPlayer
+class_name Player
 
 ## Default godot player controller
 ## Gravity-based movement
