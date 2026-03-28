@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://oe2vpie47u7d"]
+
+[ext_resource type="Texture2D" uid="uid://cyjvlprcoxbno" path="res://rmlibf_godot/sprites/rml_grey_9slice.png" id="1_da16f"]
+[ext_resource type="Script" uid="uid://1tsxhd5fhty5" path="res://rmlibf_godot/prefabs/rml_nine_slice.gd" id="2_rmhvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8v81"]
+size = Vector2(100, 100)
+
+[node name="rml_static_collider" type="StaticBody2D" unique_id=89019040]
+scale = Vector2(12, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2056660337]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = -37.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6666667, 8)
+texture = ExtResource("1_da16f")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_rmhvm")
+zoom_factor = 8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53443751]
+visible = false
+shape = SubResource("RectangleShape2D_l8v81")
