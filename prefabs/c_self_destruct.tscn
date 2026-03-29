@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dy3n7dpap5dga"]
+
+[ext_resource type="Script" uid="uid://c5iw8kbpal6lf" path="res://self_destruct.gd" id="1_vbgji"]
+
+[node name="CSelfDestruct" type="Node2D" unique_id=806995762]
+script = ExtResource("1_vbgji")
