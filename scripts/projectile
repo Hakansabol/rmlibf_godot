@@ -5,9 +5,12 @@ class_name RmlProjectile
 # Most basic projectile script, a static object that detects collisions.
 
 # Target mask, to be ANDed with the team of the hit collider to determine if they register the collision
+@export_group("Basic Projectile")
 @export var target_mask: int = 9
-var hit_list: Array = []
+@export var damage: float = 1.0
+@export_group("")
 
+var hit_list: Array = []
 var initialized: bool = false
 func _ready() -> void:
 	body_shape_entered.connect(_on_body_shape_entered)
@@ -26,5 +29,6 @@ func _on_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, 
 	_on_hit(enemy)
 
 func _on_hit(body: RmlEntity):
-	body._damage(1)
+	if body.team & target_mask > 0:
+		body._damage(damage)
 	pass

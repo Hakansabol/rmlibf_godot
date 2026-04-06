@@ -14,11 +14,15 @@ enum Team {
 	Neutral = 8
 }
 
-@export var MAX_HEALTH: int
-@export var current_health: int
+@warning_ignore("enum_variable_without_default")
+@export var team: Team
+@export var MAX_HEALTH: float
+@export var current_health: float
 
 func _ready() -> void:
 	current_health = MAX_HEALTH
+	if team == 0:
+		printerr("No team set on object: " + name + "! Behavior will be incorrect!")
 
 func _damage(health: int):
 	current_health -= health
