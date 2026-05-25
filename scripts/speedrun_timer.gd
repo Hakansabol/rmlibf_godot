@@ -10,6 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if running:
 		t += delta
-	var s = ("0" + str(int(fmod(t , 1.0) * 100)))
-	var s2 = ("0" + str(int(fmod(t , 60.0))))
-	(self as RichTextLabel).text = str(int(t / 60.)) + ":" + s2.substr(len(s2)-2,2) + "." + s.substr(len(s)-2,2)
+	(self as RichTextLabel).text = Rmlibf.format_time_hhmmss_from_seconds(t)
