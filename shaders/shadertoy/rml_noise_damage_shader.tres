@@ -1,7 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://b0qg2rl8x3v01"]
 
 [ext_resource type="Shader" uid="uid://bppk23y3gec5t" path="res://rmlibf_godot/shaders/shadertoy/noise_damage.gdshader" id="1_xx7gp"]
-[ext_resource type="Texture2D" path="res://sprites/wall.png" id="2_ww2ty"]
 
 [sub_resource type="Gradient" id="Gradient_iev18"]
 
@@ -25,7 +24,6 @@ shader_parameter/edge_color = Color(0.4, 1, 0.4, 1)
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/details_color = Color(1, 0, 1, 1)
 shader_parameter/details_opacity = 0.2050000097375
-shader_parameter/edge_distance_map = ExtResource("2_ww2ty")
 shader_parameter/edge_bias_strength = 0.0
 shader_parameter/edge_remap_min = 0.0
 shader_parameter/edge_remap_max = 0.430000020425

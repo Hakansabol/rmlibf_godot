@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b8hdc2lnv1i0f"]
+
+[ext_resource type="Script" uid="uid://bht4yvawrx1ba" path="res://scripts/camera2D.gd" id="1_lqsxt"]
+[ext_resource type="Shader" uid="uid://b47f34c4h51ix" path="res://rmlibf_godot/shaders/godot-crt-shader/crt_shader.gdshader" id="2_fd4hj"]
+[ext_resource type="Texture2D" uid="uid://ditijnreq6q4j" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="3_rbx6x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8gmwl"]
+shader = ExtResource("2_fd4hj")
+shader_parameter/overscan = 0.99199998052814
+shader_parameter/flicker_intensity = 0.05
+shader_parameter/flicker_speed = 2.0
+shader_parameter/flicker_randomness = 0.5
+shader_parameter/flicker_frequency = 8.0
+shader_parameter/glitch_frequency = 0.05
+shader_parameter/glitch_line_count = 3
+shader_parameter/glitch_line_duration_min = 0.2
+shader_parameter/glitch_line_duration_max = 0.8
+shader_parameter/glitch_line_delay_max = 0.5
+shader_parameter/glitch_line_intensity = 0.8
+shader_parameter/glitch_line_thickness = 0.003
+shader_parameter/rolling_distortion_speed = 0.1
+shader_parameter/rolling_distortion_amount = 0.02
+shader_parameter/rolling_distortion_width = 0.05
+shader_parameter/time_speed = 1.0
+shader_parameter/scanline_speed = 0.02
+shader_parameter/scanline_intensity = 0.15
+shader_parameter/scanline_count = 450.0
+shader_parameter/noise_amount = 0.08
+shader_parameter/distortion_strength = 0.04800000228
+shader_parameter/chromatic_aberration = 1.5
+shader_parameter/brightness = 1.1
+shader_parameter/contrast = 1.2
+shader_parameter/saturation = 1.1
+
+[node name="RmlCamera" type="Camera2D" unique_id=1809508842]
+script = ExtResource("1_lqsxt")
+metadata/_custom_type_script = "uid://bht4yvawrx1ba"
+
+[node name="CRTShader" type="ColorRect" parent="." unique_id=1519030732]
+visible = false
+z_index = 500
+material = SubResource("ShaderMaterial_8gmwl")
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+mouse_filter = 2
+
+[node name="ScreenFlash" type="Sprite2D" parent="." unique_id=456384468]
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(500, 500)
+texture = ExtResource("3_rbx6x")
