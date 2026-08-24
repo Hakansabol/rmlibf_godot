@@ -15,22 +15,11 @@ if [ ! -d "../addons/richtext2" ]; then
 	rm addons/ -r
 fi
 
+# link all the folders into the root dir
+ln -sdrT scripts ../scripts 2> /dev/null
+ln -sdrT sprites ../sprites 2> /dev/null
+ln -sdrT sounds ../sounds 2> /dev/null
+ln -sdrT scenes ../scenes 2> /dev/null
+ln -sdrT shaders ../sprites/shaders 2> /dev/null
+
 echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name GameManager (likely default) to fix errors!"
-
-# these folders are created conditionally rather than supressing the error stream, I don't remember why.
-if [ ! -d "../sprites" ]; then
-	mkdir ../sprites
-fi
-if [ ! -d "../scenes" ]; then
-	mkdir ../scenes
-fi
-if [ ! -d "../sounds" ]; then
-	mkdir ../sounds
-fi
-if [ ! -d "../scripts" ]; then
-	mkdir ../scripts
-fi
-
-# Spawn other files.
-# This is a template, meaning it is meant to be edited for this individual project, unlike most other scripts, which are meant to be extended and left unchanged.
-cp ./extras/game_manager ../scripts/game_manager.gd --no-clobber
