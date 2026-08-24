@@ -16,10 +16,11 @@ if [ ! -d "../addons/richtext2" ]; then
 fi
 
 # link all the folders into the root dir
-ln -sdrT scripts ../scripts 2> /dev/null
-ln -sdrT sprites ../sprites 2> /dev/null
-ln -sdrT sounds ../sounds 2> /dev/null
-ln -sdrT scenes ../scenes 2> /dev/null
-ln -sdrT shaders ../sprites/shaders 2> /dev/null
+mkdir ../scripts ../sprites ../sounds ../scenes
+ln -sdrT scripts ../scripts/rml
+ln -sdrT sprites ../sprites/rml
+ln -sdrT shaders ../sprites/shaders
+ln -sdrT sounds ../sounds/rml
+ln -sdrT prefabs ../scenes/rml
 
 echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name GameManager (likely default) to fix errors!"
