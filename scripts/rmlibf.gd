@@ -1,5 +1,7 @@
 class_name Rmlibf
 
+## Global script containing helper functions usable throughout the project
+
 static func format_time_hhmmss_from_seconds(seconds: float) -> String:
 	var s = ("0" + str(int(fmod(seconds , 1.0) * 100)))
 	var s2 = ("0" + str(int(fmod(seconds , 60.0))))

@@ -19,13 +19,13 @@ class smoothing_effect:
 		self.time_elapsed = 0
 
 
-func shake(strength: float):
+func effect_shake(strength: float):
 	effects.push_back(smoothing_effect.new("shake", "pulse", strength, 5))
 
-func flash_white_decaying(opacity: float, duration: float):
+func effect_flash_white(opacity: float, duration: float):
 	effects.push_back(smoothing_effect.new("flash_white", "no_smooth", opacity, duration))
 
-func flash_white_decaying_fr_fr(opacity: float, duration: float):
+func effect_flash_white_decaying(opacity: float, duration: float):
 	effects.push_back(smoothing_effect.new("flash_white", "linear", opacity, duration))
 
 func _ready() -> void:
