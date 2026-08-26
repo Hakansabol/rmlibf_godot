@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://oe2vpie47u7d"]
 
-[ext_resource type="Texture2D" uid="uid://cyjvlprcoxbno" path="res://rmlibf_godot/sprites/rml_grey_9slice.png" id="1_da16f"]
-[ext_resource type="Script" uid="uid://1tsxhd5fhty5" path="res://rmlibf_godot/prefabs/rml_nine_slice.gd" id="2_rmhvm"]
+[ext_resource type="Texture2D" uid="uid://bof8pvvafnve8" path="res://rmlibf_godot/sprites/rml_grey_9slice.png" id="1_da16f"]
+[ext_resource type="Script" uid="uid://cnifnuotibem5" path="res://rmlibf_godot/scripts/rml_nine_slice.gd" id="2_rmhvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8v81"]
 size = Vector2(100, 100)

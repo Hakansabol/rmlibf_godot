@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b8hdc2lnv1i0f"]
 
-[ext_resource type="Script" uid="uid://bht4yvawrx1ba" path="res://scripts/camera2D.gd" id="1_lqsxt"]
-[ext_resource type="Shader" uid="uid://b47f34c4h51ix" path="res://rmlibf_godot/shaders/godot-crt-shader/crt_shader.gdshader" id="2_fd4hj"]
-[ext_resource type="Texture2D" uid="uid://ditijnreq6q4j" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="3_rbx6x"]
+[ext_resource type="Script" uid="uid://simp0nya8x6o" path="res://rmlibf_godot/scripts/rml_camera2D.gd" id="1_lqsxt"]
+[ext_resource type="Shader" uid="uid://dn304ks5vuijj" path="res://rmlibf_godot/sprites/shaders/godot-crt-shader/crt_shader.gdshader" id="2_fd4hj"]
+[ext_resource type="Texture2D" uid="uid://dxlxbdwprjnce" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="3_rbx6x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8gmwl"]
 shader = ExtResource("2_fd4hj")
@@ -32,9 +32,9 @@ shader_parameter/brightness = 1.1
 shader_parameter/contrast = 1.2
 shader_parameter/saturation = 1.1
 
-[node name="RmlCamera" type="Camera2D" unique_id=1809508842]
+[node name="RmlCamera" type="Camera2D" unique_id=1809508842 node_paths=PackedStringArray("flash_white_sprite")]
 script = ExtResource("1_lqsxt")
-metadata/_custom_type_script = "uid://bht4yvawrx1ba"
+flash_white_sprite = NodePath("ScreenFlash")
 
 [node name="CRTShader" type="ColorRect" parent="." unique_id=1519030732]
 visible = false
