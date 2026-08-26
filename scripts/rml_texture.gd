@@ -12,16 +12,26 @@ var pulse_amount: float = 0.0
 func effect_pulse(strength: float = 0.3):
 	pulse_amount += strength
 func _update_effect_pulse(delta: float):
+	shake_amount -= delta * 0.2
+func _update_effect_pulse_fixedtime(delta: float):
 	pulse_amount *= 0.98
 
 var shake_amount: float = 0.0
 func effect_shake(strength: float = 0.5):
 	shake_amount += strength
 func _update_effect_shake(delta: float):
+	shake_amount -= delta * 0.7
+func _update_effect_shake_fixedtime(delta: float):
 	shake_amount *= 0.98
 
 
 var offset_position: Vector2 = Vector2(0, 0)
 func apply_effects(delta: float) -> void:
 	position -= offset_position
-	offset_position = Vector2(randf_range(-shake,shake), randf_range(-shake,shake))
+	offset_position = Vector2(randf_range(-shake_amount,shake_amount), randf_range(-shake_amount,shake_amount))
+	_update_effect_pulse(delta)
+	_update_effect_shake(delta)
+
+func _physics_process(delta: float) -> void:
+	_update_effect_pulse_fixedtime(delta)
+	_update_effect_shake_fixedtime(delta)
