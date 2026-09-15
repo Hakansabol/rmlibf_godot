@@ -24,7 +24,7 @@ if [ -d "$1/.godot" ]; then
 	cp -rn sounds $1/sounds/rml
 	cp -rn prefabs $1/scenes/rml
 else
-	echo -e "\e[32mFailed to create links: specify a directory containing a .godot folder!"
+	echo -e "\e[32mFailed to copy assets: specify a directory containing a .godot folder!"
 fi
 
 echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name GameManager (likely default) to fix errors!"
