@@ -6,7 +6,8 @@ if [ ! $(pwd | grep rmlibf) ]; then
 	exit 1
 fi
 
-mkdir ../scripts ../sprites ../sounds ../scenes ../addons 
+# create the destination folder for unzip.
+mkdir ../addons 2> /dev/null
 
 if [ ! -d "../addons/richtext2" ]; then
 	unzip -q GodotRichTextLabel2.zip
@@ -14,11 +15,17 @@ if [ ! -d "../addons/richtext2" ]; then
 	rm addons/ -r
 fi
 
-# link all the folders into the root dir
-# ln -sdrT scripts ../scripts/rml
-# ln -sdrT sprites ../sprites/rml
-# ln -sdrT shaders ../sprites/shaders
-# ln -sdrT sounds ../sounds/rml
-# ln -sdrT prefabs ../scenes/rml
+if [ -d "$1/.godot" ]; then 
+
+	# link all the folders into the root dir
+	mkdir $1/scripts $1/sprites $1/sounds $1/scenes
+	ln -sdrT scripts $1/scripts/rml
+	ln -sdrT sprites $1/sprites/rml
+	ln -sdrT shaders $1/sprites/shaders
+	ln -sdrT sounds $1/sounds/rml
+	ln -sdrT prefabs $1/scenes/rml
+else
+	echo -e "\e[32mFailed to create links: specify a directory containing a .godot folder!"
+fi
 
 echo -e "\e[32mreminder: \e[0mRegister scripts/game_manager.gd as an autoload under the name GameManager (likely default) to fix errors!"
