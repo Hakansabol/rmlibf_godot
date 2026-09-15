@@ -16,14 +16,13 @@ if [ ! -d "../addons/richtext2" ]; then
 fi
 
 if [ -d "$1/.godot" ]; then 
-
-	# link all the folders into the root dir
+	# copy all the folders into the root dir
 	mkdir $1/scripts $1/sprites $1/sounds $1/scenes
-	ln -sdrT scripts $1/scripts/rml
-	ln -sdrT sprites $1/sprites/rml
-	ln -sdrT shaders $1/sprites/shaders
-	ln -sdrT sounds $1/sounds/rml
-	ln -sdrT prefabs $1/scenes/rml
+	cp -rn scripts $1/scripts/rml
+	cp -rn sprites $1/sprites/rml
+	cp -rn shaders $1/sprites/shaders
+	cp -rn sounds $1/sounds/rml
+	cp -rn prefabs $1/scenes/rml
 else
 	echo -e "\e[32mFailed to create links: specify a directory containing a .godot folder!"
 fi
