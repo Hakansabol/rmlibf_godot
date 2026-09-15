@@ -1,4 +1,4 @@
 extends Node
 
-var popup = load("uid://bho3r4mb681r8")
+var popup = preload("res://scenes/rml/rml_tooltip.tscn")
 var camera: RmlCamera

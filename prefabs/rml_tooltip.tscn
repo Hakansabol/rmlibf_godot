@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://bho3r4mb681r8"]
 
-[ext_resource type="Script" uid="uid://bmtymdrdw2a70" path="res://rmlibf_godot/scripts/rml_popup_base.gd" id="1_0q56w"]
+[ext_resource type="Script" uid="uid://fdimb80ykyvf" path="res://scripts/rml/rml_popup_base.gd" id="1_d5fuu"]
 [ext_resource type="Script" uid="uid://i8bg2nawwnn0" path="res://addons/richtext2/text_effects/effects/rte_sin.gd" id="2_0jluh"]
 [ext_resource type="Script" uid="uid://2f4fi75scxes" path="res://addons/richtext2/richer_text_label.gd" id="3_ioyg3"]
-[ext_resource type="Texture2D" uid="uid://ckh8rqw3p1cen" path="res://rmlibf_godot/sprites/rml_grayed_9slice.png" id="4_i1k8n"]
+[ext_resource type="Texture2D" uid="uid://mnjpxt4wej0k" path="res://sprites/rml/rml_grey_9slice.png" id="4_i1k8n"]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_0q56w"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_d5fuu"]
 resource_name = "sin"
 script = ExtResource("2_0jluh")
-metadata/rt = 19965105222603
+metadata/rt = 3611329371842
 
 [node name="rml_tooltip" type="CenterContainer" unique_id=1264710304 node_paths=PackedStringArray("TextObject", "BackObject")]
 custom_maximum_size = Vector2(-1, 25.425)
 clip_contents = true
 offset_right = 100.0
 offset_bottom = 63.305
-script = ExtResource("1_0q56w")
+script = ExtResource("1_d5fuu")
 TextObject = NodePath("RichTextLabel")
 BackObject = NodePath("RichTextLabel/NinePatchRect")
 animation_length = 0.2
@@ -37,7 +37,7 @@ bbcode_enabled = true
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
-custom_effects = [SubResource("RichTextEffect_0q56w")]
+custom_effects = [SubResource("RichTextEffect_d5fuu")]
 script = ExtResource("3_ioyg3")
 bbcode = "[salmon]placeholder[]
 [sin]place[] held."
