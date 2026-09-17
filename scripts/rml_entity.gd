@@ -1,4 +1,4 @@
-@icon("res://rmlibf_godot/editor_assets/rml_asset_entity.png")
+# @icon("res://rmlibf_godot/editor_assets/rml_asset_entity.png")
 extends CollisionObject2D
 class_name RmlEntity
 

@@ -7,7 +7,8 @@ class_name Hoverable
 
 ## The text to display in the hoverable
 @export_multiline var bbcode: String
-signal _on_hovered
+## Whether or not game_manager.gd should let this object be dragged by the mouse cursor
+@export var draggable: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +18,6 @@ func _ready() -> void:
 
 var popup: RmlPopup = null
 func _on_mouse_entered():
-	_on_hovered.emit()
 	if not popup:
 		popup = GameManager.popup.instantiate()
 		popup.TextObject.bbcode = bbcode
@@ -31,3 +31,12 @@ func _on_mouse_exited():
 func _exit_tree() -> void:
 	if popup:
 		popup.destroy()
+
+func _on_start_dragging():
+	pass
+func _on_end_dragging():
+	pass
+func _on_while_dragging():
+	get_parent().global_position = GameManager.get_mouse_position() - get_parent_area_size() * 0.5
+func _on_clicked():
+	pass

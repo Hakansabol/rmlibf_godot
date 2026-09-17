@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cs0elfqi3lwtr"]
 
 [ext_resource type="Script" uid="uid://5hv4pjs1xcht" path="res://addons/richtext2/text_effects/anims/rte_fader.gd" id="1_fpd5a"]
-[ext_resource type="Script" uid="uid://b2gvwx4xbspls" path="res://scripts/dialogue.gd" id="2_n5uqu"]
+[ext_resource type="Script" uid="uid://bleb5uxhu7r4m" path="res://scripts/rml/rml_dialogue.gd" id="2_n5uqu"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_fpd5a"]
 resource_name = "fader"

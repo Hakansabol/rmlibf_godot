@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b8hdc2lnv1i0f"]
 
-[ext_resource type="Script" uid="uid://simp0nya8x6o" path="res://rmlibf_godot/scripts/rml_camera2D.gd" id="1_lqsxt"]
-[ext_resource type="Shader" uid="uid://dn304ks5vuijj" path="res://rmlibf_godot/sprites/shaders/godot-crt-shader/crt_shader.gdshader" id="2_fd4hj"]
-[ext_resource type="Texture2D" uid="uid://dxlxbdwprjnce" path="res://rmlibf_godot/sprites/rml_square_filled.svg" id="3_rbx6x"]
+[ext_resource type="Script" uid="uid://bkukae03cfmub" path="res://scripts/rml/rml_camera2D.gd" id="1_lqsxt"]
+[ext_resource type="Shader" uid="uid://btg2vjw7mos7r" path="res://sprites/shaders/godot-crt-shader/crt_shader.gdshader" id="2_fd4hj"]
+[ext_resource type="Texture2D" uid="uid://bpfsm5dtl0lcd" path="res://sprites/rml/rml_square_filled.svg" id="3_rbx6x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8gmwl"]
 shader = ExtResource("2_fd4hj")

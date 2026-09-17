@@ -26,16 +26,16 @@ func _update_effect_shake(delta: float):
 var static_size: float = 1.0
 const SIZE_CHANGE_SPEED = 0.4
 ## Set the default size of the object.
-func add_static_size_multiplier(target_size: float):
+func set_static_size_multiplier(target_size: float):
 	static_size = target_size
 
 var offset_position: Vector2 = Vector2(0, 0)
-func apply_effects(delta: float) -> void:
+func apply_effects(_delta: float) -> void:
 	position -= offset_position
 	offset_position = Vector2(randf_range(-shake_amount,shake_amount), randf_range(-shake_amount,shake_amount))
 	position += offset_position
 
-	scale = Vector2(1+pulse_amount,1+ pulse_amount)
+	scale = Vector2(static_size+pulse_amount,static_size+ pulse_amount)
 
 func update_effects(delta: float) -> void:
 	_update_effect_pulse(delta)
@@ -45,6 +45,3 @@ func update_effects(delta: float) -> void:
 func _process(delta: float) -> void:
 	update_effects(delta)
 	apply_effects(delta)
-
-func _on_hoverable__on_hovered() -> void:
-	pass # Replace with function body.

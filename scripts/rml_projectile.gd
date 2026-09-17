@@ -1,4 +1,4 @@
-@icon("res://rmlibf_godot/editor_assets/rml_asset_projectile.png")
+# @icon("res://rmlibf_godot/editor_assets/rml_asset_projectile.png")
 extends Area2D
 class_name RmlProjectile
 

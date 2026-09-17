@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bwq88k6e35alp"]
+
+[ext_resource type="Script" uid="uid://cr05fa65uqria" path="res://scripts/rml/c_hoverable.gd" id="1_emwvu"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_xx3q6"]
+[ext_resource type="Script" uid="uid://b22brovshs2kb" path="res://scripts/rml/rml_texture.gd" id="3_k6fn4"]
+
+[node name="RmlHoverableTexture" type="Control" unique_id=324552140]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Hoverable" type="Control" parent="." unique_id=986428997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emwvu")
+bbcode = "hihi
+this is a godot logo
+i like it a lot because it looks so happy and gender neutral :)"
+metadata/_custom_type_script = "uid://cr05fa65uqria"
+
+[node name="RmlTexture" type="TextureRect" parent="." unique_id=1619248111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("2_xx3q6")
+script = ExtResource("3_k6fn4")
+metadata/_custom_type_script = "uid://b22brovshs2kb"
+
+[connection signal="mouse_entered" from="Hoverable" to="RmlTexture" method="set_static_size_multiplier" binds= [1.2]]
+[connection signal="mouse_exited" from="Hoverable" to="RmlTexture" method="set_static_size_multiplier" binds= [1.0]]
